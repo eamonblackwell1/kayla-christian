@@ -1,0 +1,1076 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kayla & Christian — Japan Elopement Proposal | Married in Japan</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Sen:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --cream: #FAF8F5;
+            --dark: #1a1a1a;
+            --darker: #111111;
+            --burgundy: #722F37;
+            --gold: #B8977E;
+            --text-dark: #1a1a1a;
+            --text-grey: #888;
+            --text-light: rgba(250, 248, 245, 0.75);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Sen', sans-serif;
+            font-size: 16px;
+            line-height: 1.8;
+            color: var(--text-dark);
+            background: var(--cream);
+            -webkit-font-smoothing: antialiased;
+        }
+
+        h1, h2, h3 {
+            font-family: 'Cormorant Garamond', serif;
+        }
+
+        h1 {
+            font-size: clamp(48px, 6vw, 80px);
+            font-weight: 300;
+            line-height: 1.1;
+        }
+
+        h2 {
+            font-size: clamp(36px, 4vw, 52px);
+            font-weight: 300;
+            line-height: 1.15;
+        }
+
+        h3 {
+            font-size: clamp(22px, 2.5vw, 28px);
+            font-weight: 400;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 60px;
+        }
+
+        .label {
+            font-family: 'Sen', sans-serif;
+            font-size: 11px;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            color: var(--gold);
+            margin-bottom: 16px;
+        }
+
+        .accent-line {
+            width: 40px;
+            height: 2px;
+            background: var(--burgundy);
+            margin: 24px 0;
+        }
+
+        .accent-line-gold {
+            width: 40px;
+            height: 2px;
+            background: var(--gold);
+            margin: 24px 0;
+        }
+
+        /* ========== HERO ========== */
+        .hero {
+            min-height: 100vh;
+            background: var(--darker);
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            display: none;
+        }
+
+        .hero-text {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 80px 60px;
+            text-align: left;
+        }
+
+        .hero-image {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center 20%;
+            display: block;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            color: var(--cream);
+            max-width: 480px;
+        }
+
+        .hero-content .label {
+            margin-bottom: 32px;
+        }
+
+        .hero-content h1 {
+            color: var(--cream);
+            margin-bottom: 32px;
+        }
+
+        .hero-meta {
+            font-family: 'Sen', sans-serif;
+            font-size: 13px;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            color: var(--text-light);
+            line-height: 2.2;
+        }
+
+        @media (max-width: 768px) {
+            .hero {
+                grid-template-columns: 1fr;
+                min-height: auto;
+            }
+
+            .hero-text {
+                padding: 80px 28px;
+                order: 2;
+                text-align: center;
+                justify-content: center;
+            }
+
+            .hero-content {
+                max-width: 100%;
+            }
+
+            .hero-image {
+                order: 1;
+                height: 60vh;
+            }
+        }
+
+        /* ========== SECTIONS ========== */
+        .section-light {
+            background: var(--cream);
+            color: var(--text-dark);
+            padding: 100px 0;
+        }
+
+        .section-dark {
+            background: var(--dark);
+            color: var(--cream);
+            padding: 100px 0;
+        }
+
+        .section-large {
+            padding: 140px 0;
+        }
+
+        .section-burgundy {
+            background: var(--burgundy);
+            color: var(--cream);
+            padding: 140px 0;
+            text-align: center;
+        }
+
+        /* ========== IMAGE BREAKS ========== */
+        .image-break {
+            position: relative;
+            width: 100%;
+            aspect-ratio: 21 / 9;
+            overflow: hidden;
+            background: var(--darker);
+        }
+
+        .image-break img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        /* Per-image positioning: adjust object-position to control 
+           which part of the photo is visible in the crop */
+        .img-tokyo img {
+            object-position: center 60%; /* Show more of the street level */
+        }
+
+        .img-kyoto img {
+            object-position: center 40%; /* Show more of the canopy */
+        }
+
+        .img-fuji img {
+            object-position: center 45%; /* Show pagoda + Fuji balanced */
+        }
+
+        .image-break::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(
+                180deg,
+                rgba(17, 17, 17, 0.05) 0%,
+                rgba(17, 17, 17, 0.2) 100%
+            );
+            pointer-events: none;
+        }
+
+        @media (max-width: 768px) {
+            .image-break {
+                aspect-ratio: 16 / 9;
+            }
+        }
+
+        /* ========== TIMELINE ========== */
+        .timeline-flow {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            flex-wrap: wrap;
+            margin-top: 60px;
+        }
+
+        .timeline-item {
+            text-align: center;
+            flex: 0 0 auto;
+            min-width: 120px;
+        }
+
+        .timeline-number {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 48px;
+            font-weight: 300;
+            color: var(--gold);
+            line-height: 1;
+            margin-bottom: 12px;
+        }
+
+        .timeline-title {
+            font-family: 'Sen', sans-serif;
+            font-size: 14px;
+            font-weight: 700;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: var(--cream);
+            margin-bottom: 8px;
+        }
+
+        .timeline-desc {
+            font-family: 'Sen', sans-serif;
+            font-size: 13px;
+            color: var(--text-light);
+            max-width: 140px;
+            margin: 0 auto;
+        }
+
+        /* ========== OPTION CARDS ========== */
+        .options-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .option-card {
+            border: 1px solid rgba(0,0,0,0.08);
+            padding: 36px;
+            transition: all 0.3s ease;
+        }
+
+        .option-card:hover {
+            transform: translateY(-2px);
+            border-color: var(--burgundy);
+        }
+
+        .option-card-dark {
+            border: 1px solid rgba(255,255,255,0.08);
+        }
+
+        .option-card-dark:hover {
+            border-color: var(--gold);
+        }
+
+        .option-tag {
+            display: inline-block;
+            font-family: 'Sen', sans-serif;
+            font-size: 11px;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            color: var(--burgundy);
+            background: rgba(114, 47, 55, 0.06);
+            padding: 6px 14px;
+            margin-bottom: 16px;
+        }
+
+        .option-tag-dark {
+            color: var(--gold);
+            background: rgba(184, 151, 126, 0.1);
+        }
+
+        .option-card h3 {
+            margin-bottom: 12px;
+        }
+
+        .option-card p {
+            font-size: 15px;
+            line-height: 1.7;
+            color: var(--text-grey);
+        }
+
+        .option-card-dark p {
+            color: var(--text-light);
+        }
+
+        .card-accent {
+            width: 20px;
+            height: 2px;
+            background: var(--burgundy);
+            margin-bottom: 16px;
+        }
+
+        .card-accent-gold {
+            width: 20px;
+            height: 2px;
+            background: var(--gold);
+            margin-bottom: 16px;
+        }
+
+        /* ========== COST TABLE ========== */
+        .cost-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 40px;
+        }
+
+        .cost-table th,
+        .cost-table td {
+            padding: 14px 0;
+            border-bottom: 1px solid rgba(0,0,0,0.06);
+            font-family: 'Sen', sans-serif;
+            font-size: 15px;
+        }
+
+        .cost-table th {
+            text-align: left;
+            font-weight: 600;
+        }
+
+        .cost-table td:nth-child(2),
+        .cost-table td:nth-child(3),
+        .cost-table th:nth-child(2),
+        .cost-table th:nth-child(3) {
+            text-align: right;
+        }
+
+        .total-row td {
+            font-weight: 700;
+            font-size: 17px;
+            border-top: 2px solid var(--burgundy);
+            border-bottom: none;
+            padding-top: 20px;
+        }
+
+        /* ========== HANDLE GRID ========== */
+        .handle-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            margin-top: 40px;
+        }
+
+        .handle-grid h3 {
+            margin-bottom: 16px;
+            color: var(--cream);
+        }
+
+        .handle-grid p {
+            font-size: 15px;
+            line-height: 1.8;
+            color: var(--text-light);
+        }
+
+        .handle-item {
+            margin-bottom: 12px;
+            font-size: 15px;
+            color: var(--text-light);
+            line-height: 1.7;
+            padding-left: 16px;
+            position: relative;
+        }
+
+        .handle-item::before {
+            content: '—';
+            position: absolute;
+            left: 0;
+            color: var(--gold);
+        }
+
+        /* ========== STEPS ========== */
+        .steps-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 60px;
+            margin-top: 60px;
+            text-align: center;
+        }
+
+        .step-number {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 64px;
+            font-weight: 300;
+            color: var(--gold);
+            line-height: 1;
+            margin-bottom: 20px;
+        }
+
+        .step-title {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 24px;
+            font-weight: 400;
+            color: var(--cream);
+            margin-bottom: 12px;
+        }
+
+        .step-desc {
+            font-size: 14px;
+            color: var(--text-light);
+            line-height: 1.7;
+        }
+
+        /* ========== PROSE ========== */
+        .prose p {
+            margin-bottom: 24px;
+            max-width: 780px;
+        }
+
+        .prose p:last-child {
+            margin-bottom: 0;
+        }
+
+        .section-dark .prose p {
+            color: var(--text-light);
+        }
+
+        /* ========== BUDGET NOTE ========== */
+        .budget-note {
+            background: rgba(114, 47, 55, 0.04);
+            border-left: 3px solid var(--burgundy);
+            padding: 28px 32px;
+            margin-top: 40px;
+        }
+
+        .budget-note p {
+            font-size: 15px;
+            line-height: 1.7;
+            margin-bottom: 12px;
+        }
+
+        .budget-note p:last-child {
+            margin-bottom: 0;
+        }
+
+        /* ========== BILINGUAL CALLOUT ========== */
+        .bilingual-callout {
+            border: 1px solid rgba(255,255,255,0.1);
+            padding: 32px;
+            margin-top: 40px;
+            text-align: center;
+        }
+
+        .bilingual-callout p {
+            font-size: 15px;
+            color: var(--text-light);
+        }
+
+        /* ========== FEE BOX ========== */
+        .fee-box {
+            border: 2px solid var(--burgundy);
+            padding: 48px;
+            text-align: center;
+            margin-bottom: 48px;
+        }
+
+        .fee-amount {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: clamp(48px, 5vw, 72px);
+            font-weight: 300;
+            color: var(--text-dark);
+            line-height: 1;
+            margin: 16px 0 8px;
+        }
+
+        .fee-subtitle {
+            font-size: 13px;
+            color: var(--text-grey);
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        /* ========== HONEYMOON NOTE ========== */
+        .honeymoon-note {
+            background: var(--dark);
+            color: var(--cream);
+            padding: 48px;
+            margin-top: 60px;
+        }
+
+        .honeymoon-note h3 {
+            color: var(--cream);
+            margin-bottom: 16px;
+        }
+
+        .honeymoon-note p {
+            color: var(--text-light);
+            font-size: 15px;
+            line-height: 1.7;
+        }
+
+        /* ========== RESPONSIVE ========== */
+        @media (max-width: 768px) {
+            .container {
+                padding: 0 28px;
+            }
+
+            .section-light, .section-dark {
+                padding: 70px 0;
+            }
+
+            .section-large {
+                padding: 100px 0;
+            }
+
+            .section-burgundy {
+                padding: 100px 0;
+            }
+
+            .handle-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .steps-grid {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+
+            .image-break {
+                height: 35vh;
+            }
+
+            .timeline-flow {
+                gap: 24px;
+            }
+
+            .fee-box {
+                padding: 32px 24px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ==================== HERO ==================== -->
+    <section class="hero">
+        <div class="hero-text">
+            <div class="hero-content">
+                <div class="label">A Proposal for</div>
+                <h1>Kayla &<br>Christian</h1>
+                <div style="width: 40px; height: 2px; background: var(--gold); margin: 32px 0;"></div>
+                <div class="hero-meta">
+                    Early June or Spring 2027<br>
+                    Tokyo · Kyoto · Mt. Fuji<br>
+                    An elopement for two
+                </div>
+            </div>
+        </div>
+        <div class="hero-image">
+            <img src="https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?w=1920&q=80" alt="Two women in kimonos on Ninenzaka street at golden hour with Yasaka Pagoda, Kyoto">
+        </div>
+    </section>
+
+    <!-- ==================== YOUR VISION ==================== -->
+    <section class="section-light section-large">
+        <div class="container prose">
+            <div class="label">Your Vision</div>
+            <h2>This trip is about you two.</h2>
+            <div class="accent-line"></div>
+            <p>You want something that feels like the two of you, without the weight of a 100-person guest list or the pressure of making everyone else happy. You want to stand somewhere beautiful, exchange your vows, and know that this moment belongs to just the two of you.</p>
+            <p>Japan called to you because it offers everything in one place. The energy and nightlife of Tokyo. The quiet tradition of Kyoto. Food that you'll talk about for years. You want to walk through a city that feels like the future, then step into a bamboo grove that feels like it hasn't changed in centuries.</p>
+            <p>You want to wear your dress (the one you'll pick out with your mom and sister back home), say your vows somewhere steeped in Japanese culture, change into kimonos for a photoshoot, and celebrate over an incredible dinner for two. Then you want to keep exploring. Soak in a hot spring. Wake up to a view of Mt. Fuji. Eat sushi that ruins sushi for you forever.</p>
+            <p>This proposal is built around exactly that.</p>
+        </div>
+    </section>
+
+    <!-- ==================== IMAGE BREAK ==================== -->
+    <div class="image-break img-tokyo">
+        <img src="https://images.unsplash.com/photo-1554797589-7241bb691973?w=1920&q=80" alt="Tokyo neon-lit backstreet at night">
+    </div>
+
+    <!-- ==================== TIMELINE OVERVIEW ==================== -->
+    <section class="section-dark section-large">
+        <div class="container">
+            <div class="label" style="text-align: center;">Your Journey</div>
+            <h2 style="text-align: center; color: var(--cream);">10 Days Across Japan</h2>
+            <div style="width: 40px; height: 2px; background: var(--gold); margin: 24px auto 0;"></div>
+            <div class="timeline-flow">
+                <div class="timeline-item">
+                    <div class="timeline-number">01</div>
+                    <div class="timeline-title">Arrive</div>
+                    <div class="timeline-desc">Land in Tokyo</div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-number">02</div>
+                    <div class="timeline-title">Tokyo</div>
+                    <div class="timeline-desc">City, food, nightlife</div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-number">03</div>
+                    <div class="timeline-title">Tokyo</div>
+                    <div class="timeline-desc">Explore deeper</div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-number">04</div>
+                    <div class="timeline-title">Kyoto</div>
+                    <div class="timeline-desc">Bullet train, ryokan</div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-number">05</div>
+                    <div class="timeline-title">Elopement</div>
+                    <div class="timeline-desc">Your day</div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-number">06</div>
+                    <div class="timeline-title">Kyoto</div>
+                    <div class="timeline-desc">Temples, Gion</div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-number">07</div>
+                    <div class="timeline-title">Osaka</div>
+                    <div class="timeline-desc">Day trip, street food</div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-number">08</div>
+                    <div class="timeline-title">Mt. Fuji</div>
+                    <div class="timeline-desc">Ryokan, onsen</div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-number">09</div>
+                    <div class="timeline-title">Fuji</div>
+                    <div class="timeline-desc">Relax, explore</div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-number">10</div>
+                    <div class="timeline-title">Depart</div>
+                    <div class="timeline-desc">Head home</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== DAYS 1-3: TOKYO ==================== -->
+    <section class="section-light section-large">
+        <div class="container prose">
+            <div class="label">Days 1–3 · Tokyo</div>
+            <h2>The City That Never Slows Down</h2>
+            <div class="accent-line"></div>
+            <p>You land in Tokyo and step into a city that moves at a completely different speed. Your hotel is in Shibuya or Shinjuku, right in the middle of it all. Drop your bags, head outside, and just walk. The first night is yours to wander. Find a tiny ramen counter with eight seats, order a cold Asahi (trust us on this one), and let the jet lag fade.</p>
+            <p>Over the next two full days, you explore. Shibuya Crossing. Harajuku for the street style. Shinjuku for the energy and the bars tucked behind unmarked doors. Tsukiji Outer Market for breakfast sushi so fresh it changes everything you thought you knew about fish. Meiji Jingu shrine for a moment of quiet in the middle of the chaos. Akihabara if you want to see the other side of Tokyo.</p>
+            <p>We will put together a detailed day-by-day guide with restaurant reservations, suggested routes, and tips on navigating the trains (they're easier than you think). This is your time to fall in love with Japan before the main event.</p>
+        </div>
+        <div class="container" style="margin-top: 48px;">
+            <div class="options-grid">
+                <div class="option-card">
+                    <div class="option-tag">Stylish</div>
+                    <div class="card-accent"></div>
+                    <h3>Boutique Hotel</h3>
+                    <p>A design-forward hotel in Shibuya or Shinjuku with great views, walking distance to nightlife, restaurants, and transit. Think Shibuya Stream, Granbell, or similar. $200–300/night.</p>
+                </div>
+                <div class="option-card">
+                    <div class="option-tag">Classic</div>
+                    <div class="card-accent"></div>
+                    <h3>Modern Japanese Hotel</h3>
+                    <p>Clean, comfortable, well-located. Hotels like JR Kyushu Blossom or Hotel Century Southern Tower. Great value, reliable quality, easy access to everything. $150–250/night.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== IMAGE BREAK ==================== -->
+    <div class="image-break img-kyoto">
+        <img src="https://images.unsplash.com/photo-1545569341-9eb8b30979d9?w=1920&q=80" alt="Arashiyama bamboo grove in Kyoto">
+    </div>
+
+    <!-- ==================== DAY 4: TRAVEL TO KYOTO ==================== -->
+    <section class="section-dark">
+        <div class="container prose">
+            <div class="label">Day 4 · Kyoto</div>
+            <h2 style="color: var(--cream);">Into the Ancient Capital</h2>
+            <div class="accent-line-gold"></div>
+            <p>You board the Shinkansen (bullet train) at Tokyo Station. Two hours and fifteen minutes later, you're in Kyoto. The pace shifts immediately. Narrow streets, wooden machiya townhouses, the smell of incense drifting from temple gates.</p>
+            <p>Your ryokan is waiting. A traditional Japanese inn with tatami floors, sliding paper screens, and a private onsen (hot spring bath) in your room. You change into yukata robes, soak in the mineral water, and let the anticipation build. Tomorrow is your day.</p>
+            <p>That evening, walk to a nearby restaurant for kaiseki (a traditional multi-course meal). Every dish is a small work of art. This is the dinner before the dinner, a quiet night for the two of you before everything happens.</p>
+        </div>
+        <div class="container" style="margin-top: 48px;">
+            <div class="options-grid">
+                <div class="option-card option-card-dark">
+                    <div class="option-tag option-tag-dark">Traditional</div>
+                    <div class="card-accent-gold"></div>
+                    <h3 style="color: var(--cream);">Central Kyoto Ryokan</h3>
+                    <p>A ryokan in the Higashiyama or Gion area with private onsen and breakfast included. Walking distance to temples and the elopement location. Intimate, quiet, and deeply Japanese. $200–350/night.</p>
+                </div>
+                <div class="option-card option-card-dark">
+                    <div class="option-tag option-tag-dark">Secluded</div>
+                    <div class="card-accent-gold"></div>
+                    <h3 style="color: var(--cream);">Arashiyama Ryokan</h3>
+                    <p>Stay near the bamboo grove and the Katsura River. A more rural, peaceful feel. Slightly further from central Kyoto but closer to nature and some of the most photogenic spots in the city. $200–400/night.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== DAY 5: ELOPEMENT ==================== -->
+    <section class="section-light section-large">
+        <div class="container prose">
+            <div class="label">Day 5 · Elopement Day</div>
+            <h2>The Day You've Been Waiting For</h2>
+            <div class="accent-line"></div>
+            <p>Your morning starts with hair and makeup at the ryokan. Our stylist understands Western preferences (this matters more than you think, and Juri makes sure of it). You put on the dress you picked out with your mom and sister. Christian gets ready in the next room.</p>
+            <p>Your photographer and videographer arrive. From this point, they're with you for the rest of the day, capturing everything in both stills and cinematic video.</p>
+            <p>You head to your ceremony location. The two of you exchange vows, exchange rings, and share a private moment that belongs to nobody else. No audience. No performance. Just the words you wrote for each other.</p>
+            <p>After the ceremony, you change into traditional kimonos. Your photographer takes you through Kyoto: temple gardens, quiet backstreets, the bamboo grove if you choose it. Every frame is a mix of Japanese tradition and the two of you being completely yourselves.</p>
+            <p>The day ends with a celebration dinner at one of Kyoto's best restaurants. Just the two of you, incredible food, and the feeling that you just did something extraordinary.</p>
+        </div>
+        <div class="container" style="margin-top: 48px;">
+            <h3 style="margin-bottom: 24px;">Ceremony Setting</h3>
+            <div class="options-grid">
+                <div class="option-card">
+                    <div class="option-tag">Cultural</div>
+                    <div class="card-accent"></div>
+                    <h3>Temple Garden</h3>
+                    <p>A private ceremony in the garden of a Kyoto temple. Stone paths, moss, lanterns, and centuries of history surrounding you. Permits arranged by us.</p>
+                </div>
+                <div class="option-card">
+                    <div class="option-tag">Intimate</div>
+                    <div class="card-accent"></div>
+                    <h3>Private Machiya</h3>
+                    <p>A traditional Kyoto townhouse reserved exclusively for you. Wooden interiors, river views, complete privacy. Your vows, your space, your way.</p>
+                </div>
+                <div class="option-card">
+                    <div class="option-tag">Scenic</div>
+                    <div class="card-accent"></div>
+                    <h3>Bamboo Grove</h3>
+                    <p>Exchange vows surrounded by towering bamboo in Arashiyama. Best done early morning when the light filters through and the crowds haven't arrived. Unforgettable in photos.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== DAY 6-7: KYOTO + OSAKA ==================== -->
+    <section class="section-dark">
+        <div class="container prose">
+            <div class="label">Days 6–7 · Kyoto & Osaka</div>
+            <h2 style="color: var(--cream);">Explore at Your Own Pace</h2>
+            <div class="accent-line-gold"></div>
+            <p>Day 6 is yours to explore Kyoto as a married couple. Walk through the Fushimi Inari gates. Wander Gion and spot a geisha disappearing around a corner. Visit the golden Kinkaku-ji. Sit in a tea house and try a matcha ceremony. We will give you a curated guide with our favorite spots, but the day is unstructured by design. You just got married. Go where the day takes you.</p>
+            <p>Day 7, take the 15-minute train to Osaka. This is Japan's food capital, and your mission is simple: eat everything. Takoyaki (octopus balls) from a street stall in Dotonbori. Okonomiyaki (savory pancakes) at a counter where they cook it in front of you. Kushikatsu (fried skewers) with an ice-cold beer. Osaka is louder, messier, and more fun than anywhere else in Japan. You'll love it.</p>
+            <p>You return to Kyoto that evening for your last night in the ryokan. One more soak in the onsen before the next chapter of the trip begins.</p>
+        </div>
+    </section>
+
+    <!-- ==================== IMAGE BREAK ==================== -->
+    <div class="image-break img-fuji">
+        <img src="https://images.unsplash.com/photo-1526481280693-3bfa7568e0f3?w=1920&q=80" alt="Chureito Pagoda with Mt. Fuji in the background, Fujiyoshida Japan">
+    </div>
+
+    <!-- ==================== DAYS 8-9: MT. FUJI ==================== -->
+    <section class="section-light section-large">
+        <div class="container prose">
+            <div class="label">Days 8–9 · Hakone / Kawaguchiko</div>
+            <h2>Your Honeymoon in the Mountains</h2>
+            <div class="accent-line"></div>
+            <p>From Kyoto, you take the bullet train east toward the Mt. Fuji area. Depending on which option you choose, you arrive in either Hakone (a hot spring resort town in the mountains) or Kawaguchiko (a lake town at the base of Mt. Fuji with direct views of the mountain).</p>
+            <p>This is the wind-down. No itinerary, no schedule, no pressure. You check into a ryokan with a private open-air onsen overlooking the mountains or the lake. You spend two days soaking, eating multi-course meals in your room, taking walks through volcanic valleys or along the lakeshore, and doing absolutely nothing if that's what feels right.</p>
+            <p>If the weather cooperates, you wake up to Mt. Fuji framed in your window. Even if it doesn't, the quiet and the hot springs make this the perfect way to close the trip before heading home.</p>
+        </div>
+        <div class="container" style="margin-top: 48px;">
+            <div class="options-grid">
+                <div class="option-card">
+                    <div class="option-tag">Mountain Views</div>
+                    <div class="card-accent"></div>
+                    <h3>Hakone</h3>
+                    <p>Classic hot spring resort town. Volcanic valleys, art museums, a pirate ship on a lake. Only 1 hour from Tokyo for easy departure. Ryokans here have some of the best private onsen in Japan. $200–400/night.</p>
+                </div>
+                <div class="option-card">
+                    <div class="option-tag">Fuji Views</div>
+                    <div class="card-accent"></div>
+                    <h3>Kawaguchiko</h3>
+                    <p>Right at the base of Mt. Fuji. Wake up to the iconic silhouette reflected in the lake. Quieter and more remote than Hakone. The postcard view you've seen a hundred times, except now it's real. $200–350/night.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== DAY 10: DEPART ==================== -->
+    <section class="section-dark">
+        <div class="container prose">
+            <div class="label">Day 10 · Departure</div>
+            <h2 style="color: var(--cream);">Head Home</h2>
+            <div class="accent-line-gold"></div>
+            <p>From the Fuji area, it's a short train ride back to Tokyo. Depending on your flight time, you might have a few hours to grab a final bowl of ramen, pick up souvenirs, or just sit in a park and take it all in before heading to the airport.</p>
+            <p>You fly home married, with photos and video that capture exactly what this trip was. And when you're ready, you throw the party back in Charlotte.</p>
+        </div>
+    </section>
+
+    <!-- ==================== WHAT WE HANDLE ==================== -->
+    <section class="section-dark" style="border-top: 1px solid rgba(255,255,255,0.05);">
+        <div class="container">
+            <div class="label">What's Included</div>
+            <h2 style="color: var(--cream);">What We Handle</h2>
+            <div class="accent-line-gold"></div>
+            <div class="handle-grid">
+                <div>
+                    <h3>Before the Trip</h3>
+                    <div class="handle-item">Source and book your photographer/videographer</div>
+                    <div class="handle-item">Source and book hair and makeup artist</div>
+                    <div class="handle-item">Arrange kimono rental and dressing</div>
+                    <div class="handle-item">Find and secure your ceremony location and permits</div>
+                    <div class="handle-item">Book your ryokans and hotels</div>
+                    <div class="handle-item">Build your complete day-by-day itinerary</div>
+                    <div class="handle-item">Restaurant research and reservations</div>
+                    <div class="handle-item">Bullet train and local transport logistics</div>
+                    <div class="handle-item">Cultural etiquette guide and key Japanese phrases</div>
+                </div>
+                <div>
+                    <h3>On the Ground</h3>
+                    <div class="handle-item">Juri is present on your elopement day in Kyoto</div>
+                    <div class="handle-item">Vendor coordination and timeline management</div>
+                    <div class="handle-item">Communication with all Japanese-speaking vendors</div>
+                    <div class="handle-item">Troubleshooting if anything comes up during the trip</div>
+                    <div class="handle-item">Weather backup planning for your elopement day</div>
+                </div>
+            </div>
+
+            <div style="margin-top: 60px;">
+                <h3 style="color: var(--cream); margin-bottom: 16px;">What You Handle</h3>
+                <div class="handle-item">Flights to and from Japan (we provide estimates)</div>
+                <div class="handle-item">Your wedding dress (you mentioned shopping with your mom and sister)</div>
+                <div class="handle-item">Christian's attire</div>
+                <div class="handle-item">Travel insurance (recommended)</div>
+                <div class="handle-item">Spending money for meals, activities, and shopping outside the elopement day</div>
+            </div>
+
+            <div class="bilingual-callout">
+                <p><strong style="color: var(--gold);">Bilingual coordination.</strong> Juri is Japanese, born and raised. All vendor negotiations, bookings, and on-the-ground communication happen in Japanese. You never have to worry about the language barrier for any part of your wedding planning.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== INVESTMENT ==================== -->
+    <section class="section-light section-large">
+        <div class="container">
+            <div class="label">Investment</div>
+            <h2>What This Costs</h2>
+            <div class="accent-line"></div>
+
+            <div class="fee-box">
+                <div class="label" style="color: var(--text-grey);">Planning Fee</div>
+                <div class="fee-amount">$3,500</div>
+                <div class="fee-subtitle">USD</div>
+            </div>
+
+            <p style="margin-bottom: 56px; max-width: 780px;">We want to be upfront about costs. Below are two versions of the budget: one that keeps things lean without cutting corners on the experience, and one that adds every upgrade that makes a Japan trip truly special. Both are based on an early June 2027 trip, which is the best-value window that fits your summer break. Spring (cherry blossom season, late March) adds roughly $1,500–2,500 on top across flights and accommodation.<br><br>All figures are in USD, based on our 2026–2027 vendor research at current exchange rates (~$1 = ¥158). Vendor costs are paid directly by you to each vendor. Our planning fee is the only amount paid to us.</p>
+
+            <h3 style="font-size: 1.35rem; letter-spacing: 0.01em; margin-bottom: 6px;">The Smart Trip</h3>
+            <p style="color: var(--text-grey); font-size: 0.95rem; margin-bottom: 28px;">Great experience, budget-conscious choices throughout. Early June pricing.</p>
+
+            <table class="cost-table">
+                <thead>
+                    <tr>
+                        <th>Category</th>
+                        <th>Estimate</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Flights (2 pax, round trip CLT → Tokyo, 1 stop)</td>
+                        <td>$3,100</td>
+                    </tr>
+                    <tr>
+                        <td>Tokyo hotel (3 nights, well-located 3-star in Shibuya/Shinjuku)</td>
+                        <td>$570</td>
+                    </tr>
+                    <tr>
+                        <td>Kyoto accommodation (3 nights, boutique hotel or machiya rental)</td>
+                        <td>$550</td>
+                    </tr>
+                    <tr>
+                        <td>Fuji-area ryokan (2 nights, Kawaguchiko, private onsen, meals included)</td>
+                        <td>$1,260</td>
+                    </tr>
+                    <tr>
+                        <td>Intercity rail (bullet train + transfers)</td>
+                        <td>$380</td>
+                    </tr>
+                    <tr>
+                        <td>Elopement day bundle (ceremony, kimono for two, photography, HMU, assistant — packaged through a Kyoto studio)</td>
+                        <td>$1,450</td>
+                    </tr>
+                    <tr>
+                        <td>Celebration dinner for two</td>
+                        <td>$190</td>
+                    </tr>
+                    <tr>
+                        <td>Daily spending: food, transport, activities (7 non-elopement days)</td>
+                        <td>$750</td>
+                    </tr>
+                    <tr>
+                        <td>Planning fee</td>
+                        <td>$3,500</td>
+                    </tr>
+                    <tr class="total-row">
+                        <td><strong>Estimated Total</strong></td>
+                        <td><strong>~$11,750</strong></td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <div class="budget-note">
+                <p><strong>What you get.</strong> 10 days in Japan. Professional elopement photos in Kyoto. Wedding kimono for both of you with professional dressing. A ceremony at a shrine or scenic location. Three nights in Tokyo, three in Kyoto, and two nights in a genuine ryokan near Mt. Fuji with private onsen, dinner, and breakfast. Bullet train across the country. An incredible trip by any measure.</p>
+                <p><strong>What you compromise on.</strong> No dedicated videographer (you capture video on your phones). A bundled elopement package through a Kyoto studio rather than hiring each vendor separately, which means less customization but significantly better value. Comfortable, well-located hotels in Tokyo and Kyoto rather than boutique or high-end properties. A great celebration dinner, not a top-tier splurge.</p>
+            </div>
+
+            <h3 style="font-size: 1.35rem; letter-spacing: 0.01em; margin-top: 64px; margin-bottom: 6px;">The Full Experience</h3>
+            <p style="color: var(--text-grey); font-size: 0.95rem; margin-bottom: 28px;">Every upgrade that makes this once-in-a-lifetime. Early June pricing.</p>
+
+            <table class="cost-table">
+                <thead>
+                    <tr>
+                        <th>Category</th>
+                        <th>Estimate</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Flights (2 pax, round trip CLT → Tokyo, 1 stop)</td>
+                        <td>$3,500</td>
+                    </tr>
+                    <tr>
+                        <td>Tokyo hotel (3 nights, boutique 4-star in Shibuya/Shinjuku)</td>
+                        <td>$780</td>
+                    </tr>
+                    <tr>
+                        <td>Kyoto (2 nights boutique hotel + 1 night ryokan with private onsen, meals included)</td>
+                        <td>$1,200</td>
+                    </tr>
+                    <tr>
+                        <td>Fuji-area ryokan (2 nights, Kawaguchiko, private onsen, Fuji views, meals included)</td>
+                        <td>$1,900</td>
+                    </tr>
+                    <tr>
+                        <td>Intercity rail (bullet train + transfers)</td>
+                        <td>$440</td>
+                    </tr>
+                    <tr>
+                        <td>Photographer + videographer (full day, English-speaking, Kyoto)</td>
+                        <td>$3,500</td>
+                    </tr>
+                    <tr>
+                        <td>Hair & makeup (full attendance, multiple looks)</td>
+                        <td>$970</td>
+                    </tr>
+                    <tr>
+                        <td>Kimono rental & professional dressing (wedding-grade, couple)</td>
+                        <td>$1,300</td>
+                    </tr>
+                    <tr>
+                        <td>Ceremony (shrine or temple, permits, coordination)</td>
+                        <td>$2,200</td>
+                    </tr>
+                    <tr>
+                        <td>Celebration dinner for two</td>
+                        <td>$475</td>
+                    </tr>
+                    <tr>
+                        <td>Daily spending: food, transport, activities (7 non-elopement days)</td>
+                        <td>$1,000</td>
+                    </tr>
+                    <tr>
+                        <td>Planning fee</td>
+                        <td>$3,500</td>
+                    </tr>
+                    <tr class="total-row">
+                        <td><strong>Estimated Total</strong></td>
+                        <td><strong>~$20,765</strong></td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <div class="budget-note">
+                <p><strong>What you get on top.</strong> A full-day photographer plus a dedicated videographer capturing cinematic footage of your elopement day. A formal ceremony at a Kyoto shrine or temple with all permits and coordination handled. Wedding-grade kimono with professional dressing and multiple looks from your hair and makeup stylist. An additional ryokan night with private onsen in Kyoto. Higher-end hotels throughout. A top-tier celebration dinner. More room in the daily budget to eat, explore, and spend freely.</p>
+            </div>
+
+            <div style="border-top: 1px solid rgba(0,0,0,0.08); padding-top: 40px; margin-top: 56px;">
+                <div class="budget-note">
+                    <p><strong>A note on your budget.</strong> You mentioned a comfortable range of $10,000–12,000. The Smart Trip lands right at the top of that range. The Full Experience is well above at nearly $21,000, but most couples land somewhere in between by choosing which upgrades matter most to them.</p>
+                    <p>The biggest levers: the elopement day services are the widest swing. A bundled Kyoto studio package (ceremony + kimono + photos + HMU) runs around $1,450, while hiring each vendor separately with full-day coverage and videography runs $8,000+. That single choice is a $4,000–6,500 difference. Beyond that, choosing Kawaguchiko over Hakone for your Fuji-area ryokan saves $500–800. And keeping Tokyo and Kyoto accommodation at solid mid-range rather than boutique saves another $500–1,000 across the trip.</p>
+                    <p>We can mix and match. Maybe you go lean on accommodation but hire a standalone photographer you love. Or use the studio bundle but splurge on an extra ryokan night in Kyoto. It is your trip, and we will help you build the version that feels right.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== NEXT STEPS ==================== -->
+    <section class="section-dark section-large">
+        <div class="container">
+            <div class="label" style="text-align: center;">Next Steps</div>
+            <h2 style="text-align: center; color: var(--cream);">How We Move Forward</h2>
+            <div style="width: 40px; height: 2px; background: var(--gold); margin: 24px auto 0;"></div>
+            <div class="steps-grid">
+                <div>
+                    <div class="step-number">01</div>
+                    <div class="step-title">We Talk</div>
+                    <div class="step-desc">Review this proposal, share it with your family, and come back with questions. We'll schedule a follow-up call to walk through everything and refine the plan based on your feedback.</div>
+                </div>
+                <div>
+                    <div class="step-number">02</div>
+                    <div class="step-title">You Commit</div>
+                    <div class="step-desc">Sign the planning agreement and pay the first installment. This reserves our time and we begin sourcing vendors and locking in dates.</div>
+                </div>
+                <div>
+                    <div class="step-number">03</div>
+                    <div class="step-title">We Build It</div>
+                    <div class="step-desc">We handle the sourcing, negotiations, bookings, and logistics. You focus on your dress, your vows, and getting excited about the trip of a lifetime.</div>
+                </div>
+            </div>
+            <p style="text-align: center; color: var(--text-light); margin-top: 48px; font-size: 14px;">Payment terms: 50% at signing · 25% at 180 days before · 25% at 90 days before</p>
+        </div>
+    </section>
+
+    <!-- ==================== CLOSING ==================== -->
+    <section class="section-burgundy">
+        <div class="container">
+            <h2 style="color: var(--cream); margin-bottom: 24px;">We'd love to build this with you.</h2>
+            <div style="width: 40px; height: 2px; background: var(--gold); margin: 0 auto 32px;"></div>
+            <p style="font-family: 'Cormorant Garamond', serif; font-size: 22px; font-style: italic; color: rgba(250,248,245,0.85); max-width: 600px; margin: 0 auto 32px;">No pressure, no rush. Take this to your family, talk it through, and let us know.</p>
+            <p style="font-family: 'Sen', sans-serif; font-size: 14px; letter-spacing: 3px; text-transform: uppercase; color: rgba(250,248,245,0.6);">Juri & Eamon</p>
+            <p style="font-family: 'Sen', sans-serif; font-size: 13px; letter-spacing: 2px; text-transform: uppercase; color: rgba(250,248,245,0.4); margin-top: 8px;">Married in Japan</p>
+        </div>
+    </section>
+
+</body>
+</html>
