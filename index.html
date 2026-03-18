@@ -580,6 +580,88 @@
             line-height: 1.7;
         }
 
+        /* ========== ACCOMMODATION GLANCE ========== */
+        .accom-subtitle {
+            text-align: center;
+            font-size: 17px;
+            color: var(--text-light);
+            max-width: 600px;
+            margin: 32px auto 0;
+            line-height: 1.7;
+        }
+
+        .accom-group {
+            margin-top: 64px;
+        }
+
+        .accom-group-header {
+            margin-bottom: 32px;
+        }
+
+        .accom-group-header h3 {
+            color: var(--cream);
+            font-size: clamp(26px, 3vw, 34px);
+            font-weight: 300;
+            margin-bottom: 4px;
+        }
+
+        .accom-group-header p {
+            font-size: 14px;
+            color: var(--text-light);
+            font-style: italic;
+            font-family: 'Cormorant Garamond', serif;
+            letter-spacing: 0.5px;
+        }
+
+        .accom-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+        }
+
+        .accom-card {
+            border: 1px solid rgba(255,255,255,0.08);
+            transition: all 0.3s ease;
+            overflow: hidden;
+        }
+
+        .accom-card:hover {
+            transform: translateY(-2px);
+            border-color: var(--gold);
+        }
+
+        .accom-card img {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+            display: block;
+        }
+
+        .accom-card-body {
+            padding: 28px 32px 32px;
+        }
+
+        .accom-card-body h3 {
+            color: var(--cream);
+            margin-bottom: 8px;
+        }
+
+        .accom-card-body p {
+            font-size: 15px;
+            line-height: 1.7;
+            color: var(--text-light);
+        }
+
+        .accom-price {
+            font-family: 'Sen', sans-serif;
+            font-size: 13px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: var(--gold);
+            margin-bottom: 14px;
+            display: block;
+        }
+
         /* ========== RESPONSIVE ========== */
         @media (max-width: 768px) {
             .container {
@@ -617,6 +699,18 @@
 
             .fee-box {
                 padding: 32px 24px;
+            }
+
+            .accom-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .accom-card img {
+                height: 200px;
+            }
+
+            .accom-card-body {
+                padding: 24px;
             }
         }
     </style>
@@ -716,6 +810,106 @@
                     <div class="timeline-number">10</div>
                     <div class="timeline-title">Depart</div>
                     <div class="timeline-desc">Head home</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== WHERE YOU'LL STAY ==================== -->
+    <section class="section-dark section-large">
+        <div class="container">
+            <div class="label" style="text-align: center;">Where You'll Stay</div>
+            <h2 style="text-align: center; color: var(--cream);">Accommodation at a Glance</h2>
+            <div style="width: 40px; height: 2px; background: var(--gold); margin: 24px auto 0;"></div>
+            <p class="accom-subtitle">A look at what different price points get you across Tokyo, Kyoto, and the Fuji area.</p>
+
+            <!-- TOKYO -->
+            <div class="accom-group">
+                <div class="accom-group-header">
+                    <h3>Tokyo</h3>
+                    <p>2 nights — save here, spend time outside</p>
+                </div>
+                <div class="accom-grid">
+                    <div class="accom-card">
+                        <img src="images/gracery-shinjuku.jpg" alt="Hotel Gracery Shinjuku superior double room">
+                        <div class="accom-card-body">
+                            <div class="option-tag option-tag-dark">Option A</div>
+                            <div class="card-accent-gold"></div>
+                            <h3>Hotel Gracery Shinjuku</h3>
+                            <span class="accom-price">~$150 / night</span>
+                            <p>Modern rooms in the heart of Kabukicho. Famous Godzilla terrace. Walking distance to Shinjuku nightlife, Golden Gai, and transit. Clean, fun, great value.</p>
+                        </div>
+                    </div>
+                    <div class="accom-card">
+                        <img src="images/keio-plaza.jpg" alt="Keio Plaza Hotel Tokyo Premier Grand room with city view">
+                        <div class="accom-card-body">
+                            <div class="option-tag option-tag-dark">Option B</div>
+                            <div class="card-accent-gold"></div>
+                            <h3>Keio Plaza Hotel Tokyo</h3>
+                            <span class="accom-price">~$250 / night</span>
+                            <p>Tokyo's original skyscraper hotel. Panoramic city views, Mt. Fuji on clear days. 15+ restaurants on-site. A proper upgrade that still feels like smart money.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- KYOTO -->
+            <div class="accom-group">
+                <div class="accom-group-header">
+                    <h3>Kyoto</h3>
+                    <p>2–3 nights — this is where you splurge</p>
+                </div>
+                <div class="accom-grid">
+                    <div class="accom-card">
+                        <img src="images/seikoro-ryokan.jpg" alt="Seikoro Ryokan traditional tatami room with garden view">
+                        <div class="accom-card-body">
+                            <div class="option-tag option-tag-dark">Option A</div>
+                            <div class="card-accent-gold"></div>
+                            <h3>Seikoro Ryokan</h3>
+                            <span class="accom-price">~$200–250 / night</span>
+                            <p>Historic ryokan near Kyoto Station. Tatami rooms, kaiseki dinner served in your room, public onsen carved from 400-year-old umbrella pine. The full traditional experience at a reasonable price. Private bath is reservable, not in-room.</p>
+                        </div>
+                    </div>
+                    <div class="accom-card">
+                        <img src="images/nazuna-kyoto.jpg" alt="Nazuna Kyoto Higashi Honganji private stone bath and room">
+                        <div class="accom-card-body">
+                            <div class="option-tag option-tag-dark">Option B</div>
+                            <div class="card-accent-gold"></div>
+                            <h3>Nazuna Kyoto Higashi Honganji</h3>
+                            <span class="accom-price">~$350–400 / night</span>
+                            <p>Boutique ryokan in a renovated century-old townhouse. Every room has its own private cedar or stone bath. Wagyu shabu-shabu dinner. Complimentary lounge with snacks and drinks. This is the one that delivers the private onsen-in-room experience.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- MT. FUJI AREA -->
+            <div class="accom-group">
+                <div class="accom-group-header">
+                    <h3>Mt. Fuji Area</h3>
+                    <p>2 nights — wind down and relax</p>
+                </div>
+                <div class="accom-grid">
+                    <div class="accom-card">
+                        <img src="images/kawaguchiko-ryokan.jpg" alt="Kawaguchiko ryokan lounge with Mt. Fuji and lake view">
+                        <div class="accom-card-body">
+                            <div class="option-tag option-tag-dark">Option A</div>
+                            <div class="card-accent-gold"></div>
+                            <h3>Kawaguchiko Ryokan</h3>
+                            <span class="accom-price">~$200–250 / night</span>
+                            <p>A traditional ryokan on the shores of Lake Kawaguchi. Private onsen, dinner and breakfast included, and the chance to wake up to Mt. Fuji reflected in the lake. Peaceful, authentic, great value.</p>
+                        </div>
+                    </div>
+                    <div class="accom-card">
+                        <img src="images/kozantei-ubuya.jpg" alt="Kozantei Ubuya onsen bath with floor-to-ceiling Mt. Fuji view">
+                        <div class="accom-card-body">
+                            <div class="option-tag option-tag-dark">Option B</div>
+                            <div class="card-accent-gold"></div>
+                            <h3>Kozantei Ubuya</h3>
+                            <span class="accom-price">~$350–450 / night</span>
+                            <p>Floor-to-ceiling Fuji views from your private open-air onsen. Every room faces the mountain. Kaiseki dinner, impeccable service. This is the postcard view — except you're soaking in it.</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
